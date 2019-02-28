@@ -14,3 +14,4 @@ RUN apt-get -y install build-essential valgrind git-all curl
 RUN apt-get -y clean
 # Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ENV PATH "$PATH:/root/.cargo/bin"
