@@ -1,6 +1,4 @@
-FROM ubuntu:18.04
-
-MAINTAINER retep007
+FROM ubuntu:22.04
 
 RUN apt-get -y update
 
@@ -13,5 +11,6 @@ RUN ln -fs /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime
 RUN apt-get -y install build-essential valgrind git-all curl
 RUN apt-get -y clean
 # Rust
+
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH "$PATH:/root/.cargo/bin"
